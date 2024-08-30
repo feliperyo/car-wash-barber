@@ -203,6 +203,7 @@ section.module.parallax::after {
     height: 100%;
     width: 100%;
     position: absolute;
+    bottom: -10px;
     z-index: 1;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0, rgba(0, 0, 0, 0)40%, #000 100%);
 }
@@ -289,17 +290,43 @@ section.module.parallax-2 {
     }
 }
 
+@media screen and (max-width: 1030px) {
+
+    header {
+        display: none;
+    }
+
+    section.module.parallax {
+        flex-direction: column-reverse;
+    }
+}
+
 @media screen and (max-width: 500px) {
 
-    span {
-        font-size: 38px;
+    h1 {
+        font-size: 70px;
     }
 
-    section.module.parallax-1 {
-        background-position: 65% 65%;
+    section.module.parallax {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    h1 {
+        font-size: 60px;
     }
 
-    section.module.parallax-2 {
-        background-position: 35% 35%;
+    .info {
+        width: 350px;
+    }
+
+    form {
+        width: 350px;
+    }
+
+    section.module.parallax {
+        height: 130vh !important;
     }
 }
